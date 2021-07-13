@@ -12,8 +12,9 @@ html {
 }
 
 body {
+    font-size: 0.8rem;
     margin: 0; /* 1 */
-    font-family: quicksand, sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 button,
@@ -34,4 +35,72 @@ select {
 
 .material-icons {
     font-family: "Material Icons";
+    font-size: inherit;
+}
+
+.side-nav {
+    height: 100%;
+    /* width: 10rem; */
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    color: #252525;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+}
+
+.side-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    padding: 0;
+    width: 100%;
+}
+
+.side-nav-item {
+    list-style: none;
+    width: 80%;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.side-nav-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.side-nav-item-icon {
+    margin-right: 0.3rem;
+}
+
+.side-nav-item:hover,
+.side-nav-item.active {
+    background-color: #e2e2e2;
+}
+
+.side-nav-custom-list {
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.side-nav-custom-list-btn {
+    cursor: pointer;
+}
+
+.side-nav-custom-list-btn-icon {
+    margin-right: 0.3rem;
+}
+
+.side-nav-custom-item {
+    list-style: none;
+    margin-top: 0.5rem;
 }
