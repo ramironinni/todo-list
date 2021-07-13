@@ -5,11 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <title>Todo App</title>
 </head>
 
 <body>
-    <h1>Todo App</h1>
+    <header>
+        <nav class="nav-side">
+            <ul class="nav-side-list">
+                <li class="nav-side-item"><a href="#"><span class="material-icons material-icons-outlined">
+                            inbox
+                        </span>Inbox</li></a>
+                <li class="nav-side-item"><a href="#"><span class="material-icons material-icons-outlined">
+                            today
+                        </span>Today</li></a>
+                <li class="nav-side-item"><a href="#"><span class="material-icons material-icons-outlined">
+                            date_range
+                        </span>Upcoming</li></a>
+                <ul class="nav-side-item nav-side-custom-list">Lists
+                    <li class="nav-side-custom-item"><a href="#">Travel packing</a></li>
+                    <li class="nav-side-custom-item"><a href="#">Shopping list</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <nav class="nav-top">
+            <ul class="nav-top-list">
+                <li class="nav-top-item"><a href="#">home</li></a>
+                <li class="nav-top-item"><a href="#">search</li></a>
+                <li class="nav-top-item"><a href="#">add</li></a>
+                <li class="nav-top-item"><a href="#">help</li></a>
+                <li class="nav-top-item"><a href="#">user</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Inbox</h1>
+        <div class="tasks-container">
+            <div class="task-container">
+                <div class="task-checkbox priority-3"><input type="checkbox"></div>
+                <p class="task-title">Buy cheese</p>
+                <p class="task-description">description?</p>
+                <input type="date" class="task-due-date"></input>
+            </div>
+        </div>
+    </main>
 </body>
 <script src="main.js"></script>
 
