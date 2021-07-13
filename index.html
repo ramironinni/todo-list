@@ -8,29 +8,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <title>Todo App</title>
 </head>
 
 <body>
     <header>
-        <nav class="nav-side">
-            <ul class="nav-side-list">
-                <li class="nav-side-item"><a href="#"><span class="material-icons material-icons-outlined">
-                            inbox
-                        </span>Inbox</li></a>
-                <li class="nav-side-item"><a href="#"><span class="material-icons material-icons-outlined">
-                            today
-                        </span>Today</li></a>
-                <li class="nav-side-item"><a href="#"><span class="material-icons material-icons-outlined">
-                            date_range
-                        </span>Upcoming</li></a>
-                <ul class="nav-side-item nav-side-custom-list">Lists
-                    <li class="nav-side-custom-item"><a href="#">Travel packing</a></li>
-                    <li class="nav-side-custom-item"><a href="#">Shopping list</a></li>
-                </ul>
-            </ul>
-        </nav>
         <nav class="nav-top">
             <ul class="nav-top-list">
                 <li class="nav-top-item"><a href="#">home</li></a>
@@ -40,6 +23,37 @@
                 <li class="nav-top-item"><a href="#">user</li></a>
             </ul>
         </nav>
+        <nav class="side-nav">
+            <ul class="side-nav-list">
+                <li class="side-nav-item active"><a href="#" class="side-nav-item-link"><span
+                            class="material-icons material-icons-outlined side-nav-item-icon">
+                            inbox
+                        </span>Inbox</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-item-link"><span
+                            class="material-icons material-icons-outlined side-nav-item-icon">
+                            today
+                        </span>Today</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-item-link"><span
+                            class="material-icons material-icons-outlined side-nav-item-icon">
+                            date_range
+                        </span>Upcoming</a></li>
+                <ul class="side-nav-custom-list">
+                    <div class="side-nav-custom-list-btn"><span
+                            class="material-icons material-icons-outlined side-nav-custom-list-btn-icon">
+                            expand_more
+                        </span>Lists</div>
+                    <li class="side-nav-custom-item"><a href="#" class="side-nav-item-link"><span
+                                class="material-icons material-icons-outlined">
+                                arrow_right
+                            </span>Travel packing</a></li>
+                    <li class="side-nav-custom-item"><a href="#" class="side-nav-item-link"><span
+                                class="material-icons material-icons-outlined">
+                                arrow_right
+                            </span>Shopping list</a></li>
+                </ul>
+            </ul>
+        </nav>
+
     </header>
     <main>
         <h1>Inbox</h1>
