@@ -33,9 +33,56 @@ select {
     text-transform: none;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 .material-icons {
     font-family: "Material Icons";
     font-size: inherit;
+}
+
+.top-nav {
+    background-color: #2876be;
+}
+
+.top-nav-list {
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-nav-list-group {
+    display: flex;
+}
+
+.top-nav-item {
+    list-style: none;
+    margin: 0 0.5rem;
+}
+
+.top-nav-item:first-of-type {
+    /* margin-left: 0; */
+}
+
+.top-nav-item-btn {
+    color: #fff;
+}
+
+.add-task-floating-btn {
+    position: absolute;
+    bottom: 1.3rem;
+    background-color: #2876be;
+    right: 1.3rem;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    display: flex;
+    box-shadow: 0.1rem 0.1rem 0.5rem #252525;
 }
 
 .side-nav {

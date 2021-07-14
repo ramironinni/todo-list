@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
@@ -14,40 +16,58 @@
 
 <body>
     <header>
-        <nav class="nav-top">
-            <ul class="nav-top-list">
-                <li class="nav-top-item"><a href="#">home</li></a>
-                <li class="nav-top-item"><a href="#">search</li></a>
-                <li class="nav-top-item"><a href="#">add</li></a>
-                <li class="nav-top-item"><a href="#">help</li></a>
-                <li class="nav-top-item"><a href="#">user</li></a>
+        <nav class="top-nav">
+            <ul class="top-nav-list">
+                <div class="top-nav-list-group">
+                    <li class="top-nav-item"><button class="top-nav-item-btn"><span class="material-icons-outlined">
+                                menu
+                            </span></button></li>
+                    <li class="top-nav-item"><button class="top-nav-item-btn"><span class="material-icons-outlined">
+                                home
+                            </span></button></li>
+                    <li class="top-nav-item"><button class="top-nav-item-btn"><span class="material-icons-outlined">
+                                search
+                            </span></button></li>
+                </div>
+                <div class="top-nav-list-group">
+                    <li class="top-nav-item"><button class="top-nav-item-btn"><span class="material-icons-outlined">
+                                help_outline
+                            </span></button></li>
+                    <li class="top-nav-item"><button class="top-nav-item-btn"><span class="material-icons-outlined">
+                                account_circle
+                            </span></button></li>
+                    <li class="top-nav-item"><button class="top-nav-item-btn add-task-floating-btn"><span
+                                class="material-icons-outlined">
+                                add
+                            </span></button></li>
+                </div>
             </ul>
         </nav>
         <nav class="side-nav">
             <ul class="side-nav-list">
                 <li class="side-nav-item active"><a href="#" class="side-nav-item-link"><span
-                            class="material-icons material-icons-outlined side-nav-item-icon">
+                            class="material-icons-outlined side-nav-item-icon">
                             inbox
                         </span>Inbox</a></li>
                 <li class="side-nav-item"><a href="#" class="side-nav-item-link"><span
-                            class="material-icons material-icons-outlined side-nav-item-icon">
+                            class="material-icons-outlined side-nav-item-icon">
                             today
                         </span>Today</a></li>
                 <li class="side-nav-item"><a href="#" class="side-nav-item-link"><span
-                            class="material-icons material-icons-outlined side-nav-item-icon">
+                            class="material-icons-outlined side-nav-item-icon">
                             date_range
                         </span>Upcoming</a></li>
                 <ul class="side-nav-custom-list">
                     <div class="side-nav-custom-list-btn"><span
-                            class="material-icons material-icons-outlined side-nav-custom-list-btn-icon">
+                            class="material-icons-outlined side-nav-custom-list-btn-icon">
                             expand_more
                         </span>Lists</div>
                     <li class="side-nav-custom-item"><a href="#" class="side-nav-item-link"><span
-                                class="material-icons material-icons-outlined">
+                                class="material-icons-outlined">
                                 arrow_right
                             </span>Travel packing</a></li>
                     <li class="side-nav-custom-item"><a href="#" class="side-nav-item-link"><span
-                                class="material-icons material-icons-outlined">
+                                class="material-icons-outlined">
                                 arrow_right
                             </span>Shopping list</a></li>
                 </ul>
