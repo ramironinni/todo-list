@@ -77,12 +77,48 @@
     </header>
     <main>
         <h1>Inbox</h1>
-        <div class="tasks-container">
+        <div class="tasks-group-container">
             <div class="task-container">
-                <div class="task-checkbox priority-3"><input type="checkbox"></div>
-                <p class="task-title">Buy cheese</p>
-                <p class="task-description">description?</p>
-                <input type="date" class="task-due-date"></input>
+                <label class="task-checkbox-container priority-3"><input type="checkbox" class="task-checkbox"><span
+                        class="task-checkmark"></span>
+                    <span class="task-title">Buy pizza ingredients</span><button
+                        class="material-icons-outlined task-show-details-btn">
+                        expand_more
+                        <!-- expand_less -->
+                    </button>
+                </label>
+                <div class="task-details-container">
+                    <p class="task-details-description">Lenny doesn't like anchovies!</p>
+                    <div class="task-details-list">
+                        <label class="task-details-item-container"><input type="checkbox"
+                                class="task-details-item-checkbox"><span
+                                class="task-details-item-checkmark"></span><span
+                                class="task-details-item-text">Cheese</span></label>
+                        <label class="task-details-item-container"><input type="checkbox"
+                                class="task-details-item-checkbox"><span
+                                class="task-details-item-checkmark"></span><span class="task-details-item-text">Tomato
+                                sauce</span></label>
+                        <label class="task-details-item-container"><input type="checkbox"
+                                class="task-details-item-checkbox"><span
+                                class="task-details-item-checkmark"></span><span
+                                class="task-details-item-text">Olives</span></label>
+                    </div>
+                    <button class="task-details-edit-btn"><span class="material-icons-outlined">
+                            edit
+                        </span></button>
+                    <div class="task-details-due-container">
+                        <div class="task-details-due-text">
+                            Due date:
+                        </div>
+                        <input type="date" class="task-details-due-date">
+                    </div>
+                    <div class="task-details-priority-container">
+                        <div class="priority-selector priority-one"></div>
+                        <div class="priority-selector priority-two active"></div>
+                        <div class="priority-selector priority-three"></div>
+                        <div class="priority-selector priority-four"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
