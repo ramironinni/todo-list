@@ -1,3 +1,10 @@
+:root {
+    --color-priority-one: #ca2c2c;
+    --color-priority-two: #ca802c;
+    --color-priority-three: #3f6dc2;
+    --color-priority-four: #702cca;
+}
+
 *,
 ::before,
 ::after {
@@ -191,7 +198,23 @@ h1 {
     height: 1rem;
     margin-right: 0.5rem;
     border-radius: 1rem;
-    border: 0.1rem solid #252525;
+    border: 0.13rem solid #252525;
+}
+
+.task-checkmark.task-checkmark-priority-one {
+    border: 0.13rem solid var(--color-priority-one);
+}
+
+.task-checkmark.task-checkmark-priority-two {
+    border: 0.13rem solid var(--color-priority-two);
+}
+
+.task-checkmark.task-checkmark-priority-three {
+    border: 0.13rem solid var(--color-priority-three);
+}
+
+.task-checkmark.task-checkmark-priority-four {
+    border: 0.13rem solid var(--color-priority-four);
 }
 
 .task-checkbox:checked ~ .task-checkmark {
@@ -298,33 +321,36 @@ h1 {
 }
 
 .priority-one {
-    border: 0.15rem solid #ca2c2c;
+    border: 0.15rem solid var(--color-priority-one);
 }
 
 .priority-one.active {
-    background-color: #ca2c2c;
+    background-color: var(--color-priority-one);
+    box-shadow: 0 0 0.4rem #a5a5a5;
 }
 
 .priority-two {
-    border: 0.15rem solid #ca802c;
+    border: 0.15rem solid var(--color-priority-two);
 }
 
 .priority-two.active {
-    background-color: #ca802c;
+    background-color: var(--color-priority-two);
     box-shadow: 0 0 0.4rem #a5a5a5;
 }
 
 .priority-three {
-    border: 0.15rem solid #3f6dc2;
+    border: 0.15rem solid var(--color-priority-three);
 }
 
 .priority-three.active {
-    background-color: #3f6dc2;
+    background-color: var(--color-priority-three);
+    box-shadow: 0 0 0.4rem #a5a5a5;
 }
 
 .priority-four {
-    border: 0.15rem solid #702cca;
+    border: 0.15rem solid var(--color-priority-four);
 }
 .priority-four.active {
-    background-color: #702cca;
+    background-color: var(--color-priority-four);
+    box-shadow: 0 0 0.4rem #a5a5a5;
 }
