@@ -107,6 +107,12 @@
                             edit
                         </span></button>
                     <div class="task-details-due-container">
+                        <span class="material-icons-outlined task-details-due-icon">
+                            today
+                        </span>
+                        <div>07-05-21</div>
+                    </div>
+                    <!--<div class="task-details-due-container">
                         <div class="task-details-due-text">
                             Due date:
                         </div>
@@ -117,9 +123,47 @@
                         <div class="priority-selector priority-two active"></div>
                         <div class="priority-selector priority-three"></div>
                         <div class="priority-selector priority-four"></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+        </div>
+        <div class="task-add-modal">
+            <button class="task-add-close-btn"><span class="material-icons-outlined">
+                    close
+                </span></button>
+            <h2 class="task-add-title">New task</h2>
+            <form action="">
+                <input type="text" class="task-add-name" placeholder="Task">
+                <input type="text" class="task-add-description" placeholder="Description (optional)">
+                <div class="task-add-subtasks-container">
+                    <div class="task-add-subtasks-list">
+                        <label class="task-add-subtask-item-container"><input type="text"
+                                class="task-add-subtask-item-input" placeholder="Subtask (optional)"></label>
+                    </div>
+                    <!-- <div class="task-add-subtasks-list">
+                        <label class="task-add-subtask-item-container"><input type="text"
+                                class="task-add-subtask-item-input" placeholder="Subtask (optional)"></label>
+                    </div> -->
+                    <div class="task-add-subtask-add-another-container"><button
+                            class="task-add-subtask-add-another"><span class="material-icons-outlined">
+                                add
+                            </span></button>
+                    </div>
+                </div>
+                <div class="task-add-due-container">
+                    <!-- <div class="task-add-due-text">
+                        Due date:
+                    </div> -->
+                    <input type="date" class="task-add-due-date">
+                </div>
+                <div class="task-add-priority-container">
+                    <div class="priority-selector priority-one"></div>
+                    <div class="priority-selector priority-two active"></div>
+                    <div class="priority-selector priority-three"></div>
+                    <div class="priority-selector priority-four"></div>
+                </div>
+                <button type="submit" class="task-add-submit-btn">Add</button>
+            </form>
         </div>
     </main>
 </body>
