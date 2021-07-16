@@ -104,7 +104,7 @@ input {
 
 .side-nav {
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
     left: 0;
     display: flex;
@@ -115,10 +115,12 @@ input {
     transition: 0.5s;
     background-color: var(--color-element-secondary);
     color: #252525;
+    box-shadow: none;
 }
 
 .side-nav-active {
     width: 10rem;
+    box-shadow: 0px 0px 17px 3px #2525258a;
 }
 
 .side-nav-list {
@@ -338,13 +340,15 @@ h1 {
     display: none;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+    padding-top: 5rem;
+    /* justify-content: center;
+    align-items: center; */
     background-color: #0000005b;
 }
 
 .task-add-modal-container-active {
-    display: flex;
+    /* display: flex; */
+    display: block;
 }
 
 .task-add-modal {
@@ -352,10 +356,24 @@ h1 {
     z-index: 2;
     width: 80%;
     height: fit-content;
+    margin: auto;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: var(--color-element-primary);
-    box-shadow: 0.2rem 0.2rem 0.5rem var(--color-shadow);
+    box-shadow: 0 0 1rem #5c5c5c;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 .task-add-title {

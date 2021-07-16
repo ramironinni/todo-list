@@ -14,10 +14,3 @@ const taskAddModalContainer = document.querySelector(
 function showCreateNewTask() {
     taskAddModalContainer.classList.add("task-add-modal-container-active");
 }
-
-const addTaskCloseBtn = document.querySelector(".task-add-close-btn");
-addTaskCloseBtn.addEventListener("click", cloaseCreateNewTask);
-
-function cloaseCreateNewTask(e) {
-    taskAddModalContainer.classList.remove("task-add-modal-container-active");
-}
