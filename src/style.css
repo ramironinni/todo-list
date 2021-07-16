@@ -248,11 +248,19 @@ h1 {
 .task-details-container {
     position: relative;
     z-index: 2;
+    overflow: hidden;
     width: 100%;
-    padding: 3rem 1rem 1rem;
+    max-height: 0;
+    padding: 0 1rem;
     border-radius: 0.5rem;
     background-color: var(--color-element-secondary);
     box-shadow: 0.2rem 0.2rem 0.5rem var(--color-shadow);
+    transition: 0.5s ease-out;
+}
+
+.task-details-container-active {
+    max-height: fit-content;
+    padding: 3rem 1rem 1rem;
 }
 
 .task-details-description {
@@ -280,8 +288,7 @@ h1 {
     margin: 1rem 0;
 }
 
-.task-details-item-container,
-.task-add-subtask-item-container {
+.task-details-item-container {
     display: flex;
     position: relative;
     margin-bottom: 0.5rem;
@@ -320,10 +327,28 @@ h1 {
     margin-right: 0.5rem;
 }
 
+.task-add-modal-container {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000005b;
+}
+
+.task-add-modal-container-active {
+    display: flex;
+}
+
 .task-add-modal {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 80%;
+    height: fit-content;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: var(--color-element-primary);
@@ -350,6 +375,11 @@ h1 {
 .task-add-subtasks-container {
     position: relative;
     margin-bottom: 1rem;
+}
+
+.task-add-subtask-item-container {
+    position: relative;
+    margin-bottom: 0.5rem;
 }
 
 .task-add-subtask-item-input {
@@ -394,45 +424,55 @@ h1 {
     margin: 1rem 0;
 }
 
-.priority-selector {
+.task-add-priority-item-container {
+    position: relative;
     width: 20%;
+}
+
+.task-add-priority-item-checkbox {
+    position: absolute;
+    display: none;
+}
+
+.priority-selector {
     height: 1rem;
     border-radius: 0.3rem;
+    display: block;
 }
 
 .priority-one {
     border: 0.15rem solid var(--color-priority-one);
 }
 
-.priority-one.active {
+.task-add-priority-item-checkbox:checked ~ .priority-one {
     background-color: var(--color-priority-one);
-    box-shadow: 0 0 0.4rem var(--color-shadow);
 }
 
 .priority-two {
     border: 0.15rem solid var(--color-priority-two);
 }
 
-.priority-two.active {
+.task-add-priority-item-checkbox:checked ~ .priority-two {
     background-color: var(--color-priority-two);
-    box-shadow: 0 0 0.4rem var(--color-shadow);
 }
 
 .priority-three {
     border: 0.15rem solid var(--color-priority-three);
 }
 
-.priority-three.active {
+.task-add-priority-item-checkbox:checked ~ .priority-three {
     background-color: var(--color-priority-three);
-    box-shadow: 0 0 0.4rem var(--color-shadow);
 }
 
 .priority-four {
     border: 0.15rem solid var(--color-priority-four);
 }
-.priority-four.active {
+
+.task-add-priority-item-checkbox:checked ~ .priority-four {
     background-color: var(--color-priority-four);
-    box-shadow: 0 0 0.4rem var(--color-shadow);
+}
+.task-add-priority-item-checkbox:checked ~ .priority-selector {
+    box-shadow: 0 0 0.4rem #000;
 }
 
 .task-add-submit-btn {
