@@ -8,7 +8,7 @@ const subtasksContainer = document.querySelector(
 let subtaskCounter = 2;
 
 function addSubtask() {
-    if (subtaskCounter < 6) {
+    if (subtaskCounter < 5) {
         const newSubtask = document.createElement("input");
         newSubtask.classList.add("task-add-subtask-item-input");
         newSubtask.placeholder = "Subtask (optional)";
