@@ -82,21 +82,23 @@
     <main>
         <h1>Inbox</h1>
         <div class="tasks-group-container">
-            <div class="task-container" id="task-1">
+            <div class="task-container" data-task-id="task-1" id="task-1">
                 <label class="task-checkbox-container"><input type="checkbox" class="task-checkbox"><span
                         class="task-checkmark task-checkmark-priority-two"></span>
                     <span class="task-title">Buy pizza ingredients</span><button
-                        class="material-icons-outlined task-show-details-btn">
+                        class="material-icons-outlined task-show-details-btn" data-target="task-show-details-btn">
                         expand_more
                         <!-- expand_less -->
                     </button>
                 </label>
-                <div class="task-details-container">
+                <div class="task-details-container" data-target="task-details-container">
                     <div class="task-details-controllers">
-                        <button class="task-details-edit-btn"><span class="material-icons-outlined">
+                        <button class="task-details-edit-btn"><span class="material-icons-outlined"
+                                data-target="task-details-edit-btn">
                                 edit
                             </span></button>
-                        <button class="task-details-delete-btn"><span class="material-icons-outlined">
+                        <button class="task-details-delete-btn"><span class="material-icons-outlined"
+                                data-target="task-details-delete-btn">
                                 delete
                             </span></button>
                     </div>
@@ -123,21 +125,23 @@
                     </div>
                 </div>
             </div>
-            <div class="task-container" id="task-2">
+            <div class="task-container" data-task-id="task-2" id="task-2">
                 <label class="task-checkbox-container"><input type="checkbox" class="task-checkbox"><span
-                        class="task-checkmark task-checkmark-priority-two"></span>
-                    <span class="task-title">Buy pizza ingredients</span><button
-                        class="material-icons-outlined task-show-details-btn">
+                        class="task-checkmark task-checkmark-priority-four"></span>
+                    <span class="task-title">Do laundry</span><button
+                        class="material-icons-outlined task-show-details-btn" data-target="task-show-details-btn">
                         expand_more
                         <!-- expand_less -->
                     </button>
                 </label>
-                <div class="task-details-container">
+                <div class="task-details-container" data-target="task-details-container">
                     <div class="task-details-controllers">
-                        <button class="task-details-edit-btn"><span class="material-icons-outlined">
+                        <button class="task-details-edit-btn"><span class="material-icons-outlined"
+                                data-target="task-details-edit-btn">
                                 edit
                             </span></button>
-                        <button class="task-details-delete-btn"><span class="material-icons-outlined">
+                        <button class="task-details-delete-btn"><span class="material-icons-outlined"
+                                data-target="task-details-delete-btn">
                                 delete
                             </span></button>
                     </div>
@@ -164,7 +168,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="task-add-modal-container">
             <div class="task-add-modal">
@@ -210,6 +213,19 @@
                     </div>
                     <button type="submit" class="task-add-submit-btn">Add</button>
                 </form>
+            </div>
+        </div>
+        <div class="task-delete-modal-container">
+            <!-- task-delete-modal-container-active -->
+            <div class="task-delete-modal">
+                <button class="task-delete-close-btn"><span class="material-icons-outlined">
+                        close
+                    </span></button>
+                <div class="task-delete-question">Do you want to delete this task?</div>
+                <div class="task-delete-answers-container">
+                    <button class="task-delete-answer-btn" id="delete-true">Yes</button>
+                    <button class="task-delete-answer-btn" id="delete-false">No</button>
+                </div>
             </div>
         </div>
     </main>
