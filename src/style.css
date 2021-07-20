@@ -188,6 +188,7 @@ h1 {
 
 .task-container {
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 
 .task-checkbox-container {
@@ -343,7 +344,8 @@ h1 {
     margin-right: 0.5rem;
 }
 
-.task-add-modal-container {
+.task-add-modal-container,
+.task-delete-modal-container {
     position: fixed;
     z-index: 3;
     top: 0;
@@ -357,12 +359,14 @@ h1 {
     background-color: #0000005b;
 }
 
-.task-add-modal-container-active {
+.task-add-modal-container-active,
+.task-delete-modal-container-active {
     /* display: flex; */
     display: block;
 }
 
-.task-add-modal {
+.task-add-modal,
+.task-delete-modal {
     position: relative;
     z-index: 2;
     width: 80%;
@@ -385,6 +389,35 @@ h1 {
         top: 0;
         opacity: 1;
     }
+}
+
+.task-delete-modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem 2rem 3rem;
+}
+
+.task-delete-answers-container {
+    display: flex;
+    justify-content: center;
+}
+
+.task-delete-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.task-delete-close-btn span {
+    font-size: 1rem;
+}
+
+.task-delete-answer-btn {
+    margin: 1rem 0.5rem 0;
 }
 
 .task-add-title {
@@ -507,7 +540,8 @@ h1 {
     box-shadow: 0 0 0.4rem #000;
 }
 
-.task-add-submit-btn {
+.task-add-submit-btn,
+.task-delete-answer-btn {
     width: 100%;
     padding: 0.5rem;
     border-radius: 1rem;
