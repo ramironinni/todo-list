@@ -265,7 +265,7 @@ h1 {
 
 .task-details-container-active {
     max-height: fit-content;
-    padding: 3rem 1rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
 .task-details-description {
@@ -277,15 +277,26 @@ h1 {
     font-style: oblique;
 }
 
-.task-details-edit-btn,
 .task-add-close-btn {
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
 
+.task-details-controllers {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.task-details-edit-btn,
+.task-details-delete-btn {
+    margin-left: 0.5rem;
+}
+
 .task-details-edit-btn span,
-.task-add-close-btn span {
+.task-add-close-btn span,
+.task-details-delete-btn span {
     font-size: 1rem;
 }
 

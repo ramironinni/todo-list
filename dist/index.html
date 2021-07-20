@@ -82,7 +82,7 @@
     <main>
         <h1>Inbox</h1>
         <div class="tasks-group-container">
-            <div class="task-container">
+            <div class="task-container" id="task-1">
                 <label class="task-checkbox-container"><input type="checkbox" class="task-checkbox"><span
                         class="task-checkmark task-checkmark-priority-two"></span>
                     <span class="task-title">Buy pizza ingredients</span><button
@@ -92,6 +92,14 @@
                     </button>
                 </label>
                 <div class="task-details-container">
+                    <div class="task-details-controllers">
+                        <button class="task-details-edit-btn"><span class="material-icons-outlined">
+                                edit
+                            </span></button>
+                        <button class="task-details-delete-btn"><span class="material-icons-outlined">
+                                delete
+                            </span></button>
+                    </div>
                     <p class="task-details-description">Lenny doesn't like anchovies!</p>
                     <div class="task-details-list">
                         <label class="task-details-item-container"><input type="checkbox"
@@ -107,9 +115,6 @@
                                 class="task-details-item-checkmark"></span><span
                                 class="task-details-item-text">Olives</span></label>
                     </div>
-                    <button class="task-details-edit-btn"><span class="material-icons-outlined">
-                            edit
-                        </span></button>
                     <div class="task-details-due-container">
                         <span class="material-icons-outlined task-details-due-icon">
                             today
@@ -118,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="task-container">
+            <div class="task-container" id="task-2">
                 <label class="task-checkbox-container"><input type="checkbox" class="task-checkbox"><span
                         class="task-checkmark task-checkmark-priority-two"></span>
                     <span class="task-title">Buy pizza ingredients</span><button
@@ -128,6 +133,14 @@
                     </button>
                 </label>
                 <div class="task-details-container">
+                    <div class="task-details-controllers">
+                        <button class="task-details-edit-btn"><span class="material-icons-outlined">
+                                edit
+                            </span></button>
+                        <button class="task-details-delete-btn"><span class="material-icons-outlined">
+                                delete
+                            </span></button>
+                    </div>
                     <p class="task-details-description">Lenny doesn't like anchovies!</p>
                     <div class="task-details-list">
                         <label class="task-details-item-container"><input type="checkbox"
@@ -143,9 +156,6 @@
                                 class="task-details-item-checkmark"></span><span
                                 class="task-details-item-text">Olives</span></label>
                     </div>
-                    <button class="task-details-edit-btn"><span class="material-icons-outlined">
-                            edit
-                        </span></button>
                     <div class="task-details-due-container">
                         <span class="material-icons-outlined task-details-due-icon">
                             today
@@ -154,6 +164,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="task-add-modal-container">
             <div class="task-add-modal">
