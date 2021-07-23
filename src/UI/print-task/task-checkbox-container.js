@@ -5,6 +5,7 @@ export function createTaskCheckboxContainer(task) {
     const checkbox = (() => {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
+        checkbox.checked = task.checked;
         checkbox.classList.add("task-checkbox");
         return checkbox;
     })();
@@ -12,7 +13,7 @@ export function createTaskCheckboxContainer(task) {
     const checkmark = (() => {
         const checkmark = document.createElement("span");
         checkmark.classList.add("task-checkmark");
-        checkmark.classList.add("task-checkmark-priority-two");
+        checkmark.classList.add(`task-checkmark-priority-${task.priority}`);
         return checkmark;
     })();
 

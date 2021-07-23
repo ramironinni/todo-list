@@ -1,9 +1,9 @@
 :root {
     --color-primary: #2876be;
-    --color-priority-one: #ca2c2c;
-    --color-priority-two: #ca802c;
-    --color-priority-three: #3f6dc2;
-    --color-priority-four: #702cca;
+    --color-priority-1: #ca2c2c;
+    --color-priority-2: #ca802c;
+    --color-priority-3: #3f6dc2;
+    --color-priority-4: #702cca;
     --color-grey: #7a7a7a;
     --color-shadow: #a5a5a5;
     --color-element-primary: #e1e1e1;
@@ -154,8 +154,8 @@ input {
 }
 
 .side-nav-item:hover,
-.side-nav-item.active {
-    background-color: #e2e2e2;
+.side-nav-item-active {
+    background-color: var(--color-shadow);
 }
 
 .side-nav-custom-list {
@@ -218,20 +218,20 @@ h1 {
     border: 0.13rem solid #252525;
 }
 
-.task-checkmark.task-checkmark-priority-one {
-    border: 0.13rem solid var(--color-priority-one);
+.task-checkmark.task-checkmark-priority-1 {
+    border: 0.13rem solid var(--color-priority-1);
 }
 
-.task-checkmark.task-checkmark-priority-two {
-    border: 0.13rem solid var(--color-priority-two);
+.task-checkmark.task-checkmark-priority-2 {
+    border: 0.13rem solid var(--color-priority-2);
 }
 
-.task-checkmark.task-checkmark-priority-three {
-    border: 0.13rem solid var(--color-priority-three);
+.task-checkmark.task-checkmark-priority-3 {
+    border: 0.13rem solid var(--color-priority-3);
 }
 
-.task-checkmark.task-checkmark-priority-four {
-    border: 0.13rem solid var(--color-priority-four);
+.task-checkmark.task-checkmark-priority-4 {
+    border: 0.13rem solid var(--color-priority-4);
 }
 
 .task-checkbox:checked ~ .task-checkmark {
@@ -276,7 +276,7 @@ h1 {
 
 .task-details-description {
     width: 100%;
-    margin: 0 0 1rem;
+    margin: 1rem 0;
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: #fff;
@@ -292,7 +292,6 @@ h1 {
 .task-details-controllers {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 1rem;
 }
 
 .task-details-edit-btn,
@@ -510,36 +509,36 @@ h1 {
     display: block;
 }
 
-.priority-one {
-    border: 0.15rem solid var(--color-priority-one);
+.priority-1 {
+    border: 0.15rem solid var(--color-priority-1);
 }
 
-.task-add-priority-item-checkbox:checked ~ .priority-one {
-    background-color: var(--color-priority-one);
+.task-add-priority-item-checkbox:checked ~ .priority-1 {
+    background-color: var(--color-priority-1);
 }
 
-.priority-two {
-    border: 0.15rem solid var(--color-priority-two);
+.priority-2 {
+    border: 0.15rem solid var(--color-priority-2);
 }
 
-.task-add-priority-item-checkbox:checked ~ .priority-two {
-    background-color: var(--color-priority-two);
+.task-add-priority-item-checkbox:checked ~ .priority-2 {
+    background-color: var(--color-priority-2);
 }
 
-.priority-three {
-    border: 0.15rem solid var(--color-priority-three);
+.priority-3 {
+    border: 0.15rem solid var(--color-priority-3);
 }
 
-.task-add-priority-item-checkbox:checked ~ .priority-three {
-    background-color: var(--color-priority-three);
+.task-add-priority-item-checkbox:checked ~ .priority-3 {
+    background-color: var(--color-priority-3);
 }
 
-.priority-four {
-    border: 0.15rem solid var(--color-priority-four);
+.priority-4 {
+    border: 0.15rem solid var(--color-priority-4);
 }
 
-.task-add-priority-item-checkbox:checked ~ .priority-four {
-    background-color: var(--color-priority-four);
+.task-add-priority-item-checkbox:checked ~ .priority-4 {
+    background-color: var(--color-priority-4);
 }
 .task-add-priority-item-checkbox:checked ~ .priority-selector {
     box-shadow: 0 0 0.4rem #000;

@@ -1,5 +1,27 @@
 export const defaultList = [
     {
+        id: 1,
+        title: "Buy pizza ingredients",
+        checked: false,
+        description: "Lenny doesn't like anchovies!",
+        subtasks: [
+            { title: "Cheese", checked: false },
+            { title: "Tomato", checked: true },
+            { title: "Olives", checked: false },
+        ],
+        dueDate: "2021-07-23",
+        priority: 1,
+    },
+    {
+        id: 2,
+        title: "Do laundry",
+        checked: false,
+        description: "",
+        subtasks: [],
+        dueDate: "2021-07-23",
+        priority: 1,
+    },
+    {
         id: 3,
         title: "Finish project",
         checked: false,

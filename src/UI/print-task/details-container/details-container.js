@@ -10,11 +10,14 @@ export function createTaskDetailsContainer(task) {
     const detailsControllers = createTaskDetailsControllers();
     detailsContainer.appendChild(detailsControllers);
 
-    const detailsDescription = createTaskDetailsDescription(task);
-    detailsContainer.appendChild(detailsDescription);
-
-    const taskDetailsList = createDetailsList(task);
-    detailsContainer.appendChild(taskDetailsList);
+    if (task.description) {
+        const detailsDescription = createTaskDetailsDescription(task);
+        detailsContainer.appendChild(detailsDescription);
+    }
+    if (task.description) {
+        const taskDetailsList = createDetailsList(task);
+        detailsContainer.appendChild(taskDetailsList);
+    }
 
     return detailsContainer;
 }
