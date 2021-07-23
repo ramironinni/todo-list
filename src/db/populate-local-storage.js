@@ -1,8 +1,6 @@
 import { defaultList } from "./default-list";
 
 export function populateLocalStorage() {
-    const localStorage = window.localStorage;
-
     if (localStorage.getItem("list")) {
         return;
     }
