@@ -1,5 +1,5 @@
 import { addToGroupContainer } from "./add-to-group-container";
-import { getLocalStorageList } from "./get-local-storage-list";
+import { getLocalStorageList } from "../../../db/read/get-local-storage-list";
 
 export function read() {
     const storedList = getLocalStorageList();

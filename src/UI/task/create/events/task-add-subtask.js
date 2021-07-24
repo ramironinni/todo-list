@@ -15,10 +15,9 @@ export function addSubtask() {
             const newSubtask = document.createElement("input");
             newSubtask.classList.add("task-add-subtask-item-input");
             newSubtask.placeholder = "Subtask (optional)";
-            // newSubtask.name = `new-subtask-name-${subtaskCounter}`;
-            subtaskCounter++;
-            newSubtask.name = "subtask";
+            newSubtask.name = `new-subtask-name-${subtaskCounter}`;
             subtasksContainer.appendChild(newSubtask);
+            subtaskCounter++;
         }
     }
 }
