@@ -1,8 +1,9 @@
 import "./style.css";
-import { task } from "./UI/task/task";
-import { eventHandlers } from "./UI/event-handlers/event-handlers";
+
+import { sideNav } from "./view/side-nav/side-nav";
+import { task } from "./view/task/task";
 import { populateLocalStorage } from "./db/create/populate-local-storage";
 
-eventHandlers();
+sideNav();
 populateLocalStorage();
 task();
