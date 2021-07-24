@@ -1,4 +1,4 @@
-export function createDetailsList(task) {
+export function detailsList(task) {
     const detailsList = document.createElement("div");
     detailsList.classList.add("task-details-list");
 

@@ -1,4 +1,4 @@
-export function createTaskDetailsControllers() {
+export function detailsControllers() {
     const detailsControllers = document.createElement("div");
     detailsControllers.classList.add("task-details-controllers");
 

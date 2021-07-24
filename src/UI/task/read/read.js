@@ -1,10 +1,10 @@
-import { addToGroupContainer } from "./add-to-group-container";
+import { groupContainer } from "./group-container/group-container";
 import { getLocalStorageList } from "../../../db/read/get-local-storage-list";
 
 export function read() {
     const storedList = getLocalStorageList();
 
     storedList.forEach((task) => {
-        addToGroupContainer(task);
+        groupContainer(task);
     });
 }

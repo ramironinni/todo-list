@@ -1,4 +1,4 @@
-export function createTaskCheckboxContainer(task) {
+export function checkboxContainer(task) {
     const checkboxContainer = document.createElement("label");
     checkboxContainer.classList.add("task-checkbox-container");
 
