@@ -1,15 +1,15 @@
 import { taskToggleDetails } from "./task-toggle-details";
 import { taskShowEditDetails } from "./task-show-edit";
-import { taskShowDelete } from "./delete/task-show-delete";
+import { taskShowDelete } from "../../task-delete-container-modal/events/task-show-delete";
 
-export function controllers() {
+export function events() {
     const tasksGroupContainer = document.querySelector(
         ".tasks-group-container"
     );
 
-    tasksGroupContainer.addEventListener("click", controller);
+    tasksGroupContainer.addEventListener("click", handler);
 
-    function controller(e) {
+    function handler(e) {
         const target = e.target.dataset.target;
         switch (target) {
             case "task-show-details-btn":

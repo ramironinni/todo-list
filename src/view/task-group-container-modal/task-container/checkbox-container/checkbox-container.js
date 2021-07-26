@@ -1,3 +1,5 @@
+import { toggleTaskChecked } from "./events/toggle-task-checked";
+
 export function checkboxContainer(task) {
     const checkboxContainer = document.createElement("label");
     checkboxContainer.classList.add("task-checkbox-container");
@@ -7,6 +9,8 @@ export function checkboxContainer(task) {
         checkbox.type = "checkbox";
         checkbox.checked = task.checked;
         checkbox.classList.add("task-checkbox");
+        checkbox.addEventListener("change", toggleTaskChecked);
+
         return checkbox;
     })();
 

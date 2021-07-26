@@ -1,9 +1,15 @@
 import "./style.css";
 
 import { sideNav } from "./view/side-nav/side-nav";
-import { task } from "./view/task/task";
 import { populateLocalStorage } from "./db/create/populate-local-storage";
+
+import { groupContainer } from "./view/task-group-container-modal/group-container";
+import { addContainer } from "./view/task-add-container/add-container";
+import { deleteContainer } from "./view/task-delete-container-modal/delete-container";
 
 sideNav();
 populateLocalStorage();
-task();
+
+groupContainer();
+addContainer();
+deleteContainer();

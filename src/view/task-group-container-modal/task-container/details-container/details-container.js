@@ -7,7 +7,7 @@ export function detailsContainer(task) {
     detailsContainer.classList.add("task-details-container");
     detailsContainer.dataset.target = "task-details-container";
 
-    detailsContainer.appendChild(detailsControllers());
+    detailsContainer.appendChild(detailsControllers(task));
 
     if (task.description) {
         detailsContainer.appendChild(detailsDescription(task));

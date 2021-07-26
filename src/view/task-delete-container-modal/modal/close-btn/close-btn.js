@@ -1,3 +1,5 @@
+import { closeDelete } from "../../events/close-delete";
+
 export function closeBtn() {
     const closeBtn = document.createElement("button");
     closeBtn.classList.add("task-delete-close-btn");
@@ -7,6 +9,7 @@ export function closeBtn() {
     icon.innerText = "close";
 
     closeBtn.appendChild(icon);
+    closeBtn.addEventListener("click", closeDelete);
 
     return closeBtn;
 }

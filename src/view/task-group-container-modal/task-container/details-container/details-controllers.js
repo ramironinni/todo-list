@@ -1,4 +1,4 @@
-export function detailsControllers() {
+export function detailsControllers(task) {
     const detailsControllers = document.createElement("div");
     detailsControllers.classList.add("task-details-controllers");
 
@@ -26,6 +26,7 @@ export function detailsControllers() {
         const detailsDeleteIcon = document.createElement("span");
         detailsDeleteIcon.classList.add("material-icons-outlined");
         detailsDeleteIcon.dataset.target = "task-details-delete-btn";
+        detailsDeleteIcon.dataset.delete = `${task.id}`;
         detailsDeleteIcon.innerText = "delete";
         return detailsDeleteIcon;
     })();

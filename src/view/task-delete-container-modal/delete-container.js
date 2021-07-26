@@ -1,4 +1,5 @@
 import { modal } from "./modal/modal";
+import { events } from "./events/events";
 
 export function deleteContainer(taskId) {
     const deleteContainer = document.createElement("div");
