@@ -2,7 +2,7 @@ export function add() {
     const add = document.createElement("div");
     add.classList.add("task-add-subtask-add-another-container");
 
-    const button = document.createElement("button");
+    const button = document.createElement("div");
     button.classList.add("task-add-subtask-add-another");
 
     const span = document.createElement("span");

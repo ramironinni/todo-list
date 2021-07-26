@@ -1,4 +1,4 @@
-export function name() {
+export function createName() {
     const name = document.createElement("input");
     name.type = "text";
     name.classList.add("task-add-name");

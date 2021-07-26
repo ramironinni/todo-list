@@ -1,4 +1,4 @@
-export function due() {
+export function createDue() {
     const due = document.createElement("div");
 
     const input = document.createElement("input");

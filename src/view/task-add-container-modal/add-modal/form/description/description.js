@@ -1,4 +1,4 @@
-export function description() {
+export function createDescription() {
     const description = document.createElement("input");
     description.type = "text";
     description.classList.add("task-add-description");

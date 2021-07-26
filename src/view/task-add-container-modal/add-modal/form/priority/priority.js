@@ -1,4 +1,4 @@
-export function priority() {
+export function createPriority() {
     const priority = document.createElement("div");
     priority.classList.add("task-add-priority-container");
 

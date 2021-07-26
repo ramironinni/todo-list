@@ -12,7 +12,7 @@ export function detailsContainer(task) {
     if (task.description) {
         detailsContainer.appendChild(detailsDescription(task));
     }
-    if (task.description) {
+    if (task.subtasks) {
         detailsContainer.appendChild(detailsList(task));
     }
 

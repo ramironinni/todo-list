@@ -10,7 +10,5 @@ export function localStorageUpdateTaskChecked(taskId) {
 
     list[taskToUpdateIndex].checked = !list[taskToUpdateIndex].checked;
 
-    console.log(list);
-
     saveInLocalStorage(list);
 }
