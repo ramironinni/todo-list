@@ -1,5 +1,7 @@
-import { getLastId } from "../../../../../db/read/get-last-id";
-import { addTaskToLocalStorage } from "../../../../../db/create/add-task-to-local-storage";
+import { getLastId } from "../read/get-last-id";
+import { addTaskToLocalStorage } from "./add-task-to-local-storage";
+import { closeCreateNewTask } from "../../view/task-add-container-modal/add-modal/add-top/close-button/events/close-create-new-task";
+import { addToGroupContainer } from "../../view/task-group-container/add-to-group-container";
 
 export function processForm(
     e,
@@ -11,11 +13,15 @@ export function processForm(
 ) {
     e.preventDefault();
 
-    // console.log(taskName.value);
-
-    // console.log(description.value);
-
     const lastId = getLastId();
+    const id = lastId + 1;
+
+    const title = taskName.value;
+
+    if (!title) {
+        taskName.placeholder = "You must enter a name";
+        taskName.classList.add("task-add-name-validation-false");
+    }
 
     const subtasks = subtasksContainer.childNodes[0].childNodes[0].childNodes;
     const subtasksProcessed = [];
@@ -27,10 +33,9 @@ export function processForm(
             };
             subtasksProcessed.push(subtaskProcessed);
         }
-        // console.log(subtask.value);
     });
 
-    // console.dir(due.childNodes[0].value);
+    const dueDate = due.childNodes[0].value;
 
     const priorityLevels = priority.childNodes;
 
@@ -38,25 +43,26 @@ export function processForm(
     priorityLevels.forEach((level) => {
         const checked = level.childNodes[0].checked;
         if (checked) {
-            // console.dir(checked);
             const priorityLevel = level.childNodes[1].classList[1];
             priorityLevelProcessed = Number(
                 priorityLevel[priorityLevel.length - 1]
             );
-            // console.dir(priorityLevel);
         }
     });
 
     const newTask = {
-        id: lastId + 1,
-        title: taskName.value,
+        id,
+        title,
         checked: false,
         description: description.value,
         subtasks: subtasksProcessed,
-        dueDate: due.value,
+        dueDate,
         priority: priorityLevelProcessed,
     };
 
-    console.log(newTask);
-    addTaskToLocalStorage(newTask);
+    if (title) {
+        closeCreateNewTask();
+        addToGroupContainer(newTask);
+        addTaskToLocalStorage(newTask);
+    }
 }

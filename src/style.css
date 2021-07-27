@@ -441,6 +441,16 @@ h1 {
     font-style: oblique;
 }
 
+.task-add-name-validation-false {
+    box-shadow: 0 0 1rem var(--color-priority-1);
+}
+
+.task-add-name-validation-false::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--color-priority-1);
+    opacity: 1; /* Firefox */
+}
+
 .task-add-subtasks-container {
     position: relative;
     margin-bottom: 1rem;

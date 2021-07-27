@@ -4,7 +4,7 @@ import { createSubtasksContainer } from "./subtasks/subtasks-container";
 import { createDue } from "./due/due";
 import { createPriority } from "./priority/priority";
 import { submit } from "./submit/submit";
-import { processForm } from "./events/process-form";
+import { processForm } from "../../../../db/create/process-form";
 
 export function form() {
     const form = document.createElement("form");

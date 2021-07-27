@@ -1,5 +1,6 @@
 import { detailsControllers } from "./details-controllers";
 import { detailsDescription } from "./details-description";
+import { detailsDue } from "./details-due";
 import { detailsList } from "./details-list";
 
 export function detailsContainer(task) {
@@ -14,6 +15,9 @@ export function detailsContainer(task) {
     }
     if (task.subtasks) {
         detailsContainer.appendChild(detailsList(task));
+    }
+    if (task.dueDate) {
+        detailsContainer.appendChild(detailsDue(task));
     }
 
     return detailsContainer;
