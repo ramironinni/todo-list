@@ -18,6 +18,7 @@ export function checkboxContainer(task) {
         const checkmark = document.createElement("span");
         checkmark.classList.add("task-checkmark");
         checkmark.classList.add(`task-checkmark-priority-${task.priority}`);
+        checkmark.dataset.priority = task.priority;
         return checkmark;
     })();
 

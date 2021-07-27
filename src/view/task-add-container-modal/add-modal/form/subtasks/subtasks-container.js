@@ -7,5 +7,6 @@ export function createSubtasksContainer() {
 
     subtasksContainer.appendChild(list());
     subtasksContainer.appendChild(add());
+
     return subtasksContainer;
 }

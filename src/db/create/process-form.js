@@ -14,7 +14,11 @@ export function processForm(
     e.preventDefault();
 
     const lastId = getLastId();
-    const id = lastId + 1;
+    let id = lastId + 1;
+
+    if (e.target.dataset.process === "edit") {
+        id = e.target.dataset.editedTask;
+    }
 
     const title = taskName.value;
 
@@ -28,6 +32,7 @@ export function processForm(
     subtasks.forEach((subtask) => {
         if (subtask.value) {
             const subtaskProcessed = {
+                id: subtask.dataset.subtaskId,
                 title: subtask.value,
                 checked: false,
             };
@@ -65,4 +70,6 @@ export function processForm(
         addToGroupContainer(newTask);
         addTaskToLocalStorage(newTask);
     }
+
+    e.target.reset();
 }

@@ -9,6 +9,7 @@ import { processForm } from "../../../../db/create/process-form";
 export function form() {
     const form = document.createElement("form");
     form.classList.add("task-add-form");
+    form.dataset.process = "create";
 
     const taskName = createName();
     form.appendChild(taskName);

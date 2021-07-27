@@ -4,7 +4,7 @@ export function detailsList(task) {
     const detailsList = document.createElement("div");
     detailsList.classList.add("task-details-list");
 
-    function createItemContainer(subtaskTitle, subtaskChecked) {
+    function createItemContainer(subtaskId, subtaskTitle, subtaskChecked) {
         const itemContainer = document.createElement("label");
         itemContainer.classList.add("task-details-item-container");
 
@@ -13,6 +13,7 @@ export function detailsList(task) {
             checkbox.type = "checkbox";
             checkbox.checked = subtaskChecked;
             checkbox.classList.add("task-details-item-checkbox");
+            checkbox.dataset.subtaskId = subtaskId;
             checkbox.addEventListener("change", toggleSubtaskChecked);
             return checkbox;
         })();
@@ -40,6 +41,7 @@ export function detailsList(task) {
     (function printSubtaskElements() {
         task.subtasks.forEach((subtask) => {
             const itemContainer = createItemContainer(
+                subtask.id,
                 subtask.title,
                 subtask.checked
             );

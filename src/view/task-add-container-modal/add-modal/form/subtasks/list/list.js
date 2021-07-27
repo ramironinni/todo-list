@@ -9,7 +9,7 @@ export function list() {
     input.classList.add("task-add-subtask-item-input");
     input.type = "text";
     input.placeholder = "Subtask (optional)";
-    input.name = "new-subtask-name-1";
+    input.dataset.subtaskId = "1";
 
     label.appendChild(input);
 
