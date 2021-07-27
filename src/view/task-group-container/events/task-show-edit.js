@@ -1,7 +1,6 @@
-export function taskShowEditDetails(e) {
-    const taskAddModalContainer = document.querySelector(
-        ".task-add-modal-container"
-    );
+import { showCreateNewTask } from "../../task-add-container-modal/events/show-create-new-task";
 
-    taskAddModalContainer.classList.add("task-add-modal-container-active");
+export function taskShowEditDetails(e) {
+    const edit = true;
+    showCreateNewTask(e, edit);
 }

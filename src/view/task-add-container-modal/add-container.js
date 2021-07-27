@@ -1,5 +1,6 @@
 import { addModal } from "./add-modal/add-modal";
-import { events } from "./events/events";
+import { showCreateNewTask } from "./events/show-create-new-task";
+import { addSubtask } from "./events/task-add-subtask";
 
 export function addContainer() {
     const addContainer = document.createElement("div");
@@ -13,5 +14,9 @@ export function addContainer() {
     });
 
     document.body.appendChild(addContainer);
-    events();
+
+    const addTaskBtn = document.querySelector(".add-task-floating-btn");
+    addTaskBtn.addEventListener("click", showCreateNewTask);
+
+    addSubtask();
 }

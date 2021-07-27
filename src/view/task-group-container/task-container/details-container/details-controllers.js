@@ -12,6 +12,7 @@ export function detailsControllers(task) {
         const detailsEditIcon = document.createElement("span");
         detailsEditIcon.classList.add("material-icons-outlined");
         detailsEditIcon.dataset.target = "task-details-edit-btn";
+        detailsEditIcon.dataset.taskId = task.id;
         detailsEditIcon.innerText = "edit";
         return detailsEditIcon;
     })();

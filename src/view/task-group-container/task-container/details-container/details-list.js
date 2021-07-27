@@ -1,3 +1,5 @@
+import { toggleSubtaskChecked } from "./events/toggle-subtask-checked";
+
 export function detailsList(task) {
     const detailsList = document.createElement("div");
     detailsList.classList.add("task-details-list");
@@ -11,6 +13,7 @@ export function detailsList(task) {
             checkbox.type = "checkbox";
             checkbox.checked = subtaskChecked;
             checkbox.classList.add("task-details-item-checkbox");
+            checkbox.addEventListener("change", toggleSubtaskChecked);
             return checkbox;
         })();
 
